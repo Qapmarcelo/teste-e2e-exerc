@@ -5,17 +5,16 @@ Cypress.Commands.add('login', (usuario, senha) => {
 });
 
 
-Cypress.Commands.add('addProdutos',
-    (tamanho, cor, qtde, nome, sobreNome, endereço, cidade, cep, tel, email,) => {
-        cy.visit('produtos/')
-        cy.get('[class="product-block grid"]').first().click()
-        cy.get('.button-variable-item-' + tamanho).click()
-        cy.get('.button-variable-item-' + cor).click()
-        cy.get('.input-text').clear().type(qtde)
-        cy.get('.single_add_to_cart_button').click()
-        cy.get('.dropdown-toggle > .mini-cart-items')
+Cypress.Commands.add('addProdutos', (tamanho, cor, qtde) => {
+    cy.visit('produtos/')
+    cy.get('[class="product-block grid"]').first().click()
+    cy.get('.button-variable-item-' + tamanho).click()
+    cy.get('.button-variable-item-' + cor).click()
+    cy.get('.input-text').clear().type(qtde)
+    cy.get('.single_add_to_cart_button').click()
+    cy.get('.dropdown-toggle > .mini-cart-items')
 
-    })
+})
 
 
 

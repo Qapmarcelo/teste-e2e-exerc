@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 import finalizarCompraPage from "../support/page_objects/finalizarCompra.page";
-import CheckPage from "../support/page_objects/finalizarCompra.page"
-
 
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
